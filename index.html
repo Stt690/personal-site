@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>苏彤彤 | 新媒体运营实习生 · 内容策划与平台运营</title>
+<meta name="description" content="上海外国语大学新闻传播专业学生苏彤彤的个人网站。文字功底、秀米排版与平台运营，面向新媒体运营实习岗位的作品与能力展示。" />
+<meta name="theme-color" content="#F7F3EC" />
+<meta property="og:title" content="苏彤彤 | 新媒体运营实习生" />
+<meta property="og:description" content="文字功底、秀米排版与平台运营 —— 为新媒体内容出一份力。" />
+<meta property="og:type" content="profile" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<!-- ============ 开场动画（参照 jfa-awards：手绘插画 + 小图标逐一跳出 + skip intro） ============ -->
+<div class="intro" id="intro" role="region" aria-label="开场动画">
+  <span class="intro-back" aria-hidden="true"></span>
+
+  <div class="intro-panel">
+    <button class="intro-skip" id="introSkip" type="button">
+      跳过动画
+      <svg viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="M3 8h8m0 0L8 5m3 3-3 3M13 3v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="intro-scene" aria-hidden="true">
+      <!-- 零散装饰涂鸦 -->
+      <span class="intro-doodle d1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 30c8-16 20-22 28-20"/><path d="M28 6l6 4-7 3"/></svg></span>
+      <span class="intro-doodle d2"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6v28M6 20h28M10 10l20 20M30 10L10 30"/></svg></span>
+      <span class="intro-doodle d3"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 4l4.6 11.4L36 20l-11.4 4.6L20 36l-4.6-11.4L4 20l11.4-4.6z"/></svg></span>
+      <span class="intro-doodle d4"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="4"/></svg></span>
+
+      <!-- 五个手绘小图标，一蹦一跳地出场 -->
+      <span class="ico-wrap" style="--i:0">
+        <span class="ico ico-violet">
+          <span class="ico-in">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24.5 6.5l9 9L15 34H6v-9z" />
+              <path d="M20.5 10.5l9 9" />
+              <path d="M6 34h28" />
+            </svg>
+          </span>
+        </span>
+      </span>
+
+      <span class="ico-wrap" style="--i:1">
+        <span class="ico ico-amber">
+          <span class="ico-in">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="11" width="22" height="18" rx="3" />
+              <path d="M26 18l10-6v16l-10-6z" />
+              <circle cx="11" cy="8" r="3" />
+            </svg>
+          </span>
+        </span>
+      </span>
+
+      <span class="ico-wrap" style="--i:2">
+        <span class="ico ico-green">
+          <span class="ico-in">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="6" width="28" height="28" rx="5" />
+              <circle cx="14.5" cy="14.5" r="2.6" />
+              <path d="M7 28l7.5-7.5 5.5 5.5 4.5-4.5L33 29" />
+            </svg>
+          </span>
+        </span>
+      </span>
+
+      <span class="ico-wrap" style="--i:3" data-narrow="hide">
+        <span class="ico ico-rose">
+          <span class="ico-in">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 33C7 15 15 8 20 19s12 9 16-11" />
+              <path d="M30 5l6 3-5 4" />
+            </svg>
+          </span>
+        </span>
+      </span>
+
+      <span class="ico-wrap" style="--i:4" data-narrow="hide">
+        <span class="ico ico-ink">
+          <span class="ico-in">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 5L9 35M31 5l-6 30M6 15h28M5 26h28" />
+            </svg>
+          </span>
+        </span>
+      </span>
+    </div>
+
+    <div class="intro-tagline">
+      <span class="intro-sweep" aria-hidden="true">
+        <svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M2 9C60 3 120 2 176 6c40 3 78 4 122-1" /></svg>
+      </span>
+      <p>让每一条内容，<b>都值得被看见</b></p>
+    </div>
+
+    <div class="intro-foot">
+      <span class="intro-label">PORTFOLIO</span>
+      <span class="intro-count"><b id="introNum">00</b><em>%</em></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26C9 6 15 6 16 16s7 10 12-10" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-text">
+        <strong>苏彤彤</strong>
+        <em>SU TONGTONG</em>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="#about">关于</a>
+      <a href="#skills">能力</a>
+      <a href="#match">岗位对照</a>
+      <a href="#work">作品集</a>
+      <a href="#tools">内容流程</a>
+      <a href="#timeline">经历</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-solid btn-sm" href="#contact">联系我</a>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 01 HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <span class="grid-lines"></span>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">
+          <span class="dot" aria-hidden="true"></span>
+          上海外国语大学 · 新闻传播专业 · 2026 级
+        </p>
+
+        <h1 class="hero-title reveal">
+          <span class="line">你好，我是</span>
+          <span class="line display">
+            苏彤彤
+            <svg class="scribble" viewBox="0 0 300 18" aria-hidden="true" preserveAspectRatio="none">
+              <path d="M2 12C60 4 120 3 176 8c40 4 78 5 122-1" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="line line-3">能写、能排版，也懂平台。</span>
+        </h1>
+
+        <p class="lede reveal">
+          一名大一新传学生。我的基本功是文字与内容判断，日常用秀米做图文排版，
+          我清楚自己还在打基础的阶段，
+          所以更愿意把每件小事做扎实：写清楚、排整齐、发准确。
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-solid" href="#work">
+            查看作品集
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="M2 8h11m0 0L9.4 4.4M13 8l-3.6 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#match">我是怎么匹配岗位的</a>
+        </div>
+
+        <dl class="hero-facts reveal">
+          <div>
+            <dt>每周到岗</dt>
+            <dd>3 天<span class="plus">+</span></dd>
+          </div>
+          <div>
+            <dt>连续实习</dt>
+            <dd>3 个月<span class="plus">+</span></dd>
+          </div>
+          <div>
+            <dt>可入职</dt>
+            <dd>随时</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 占位：个人照片 -->
+      <aside class="hero-portrait reveal" aria-label="个人照片占位">
+        <figure class="portrait">
+          <img src="assets/img/portrait.jpg" alt="苏彤彤的个人照片" width="900" height="1125" />
+        </figure>
+
+        <div class="portrait-tag">
+          <span class="tag-num">01</span>
+          <span class="tag-txt">新传学子<br />图文方向</span>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 参考 newvalleylabs 的跑马灯 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>内容策划</span><i>✳</i><span>文案创作</span><i>✳</i><span>秀米排版</span><i>✳</i><span>图文编辑</span><i>✳</i><span>多平台改写</span><i>✳</i><span>数据复盘</span><i>✳</i><span>平台运营</span><i>✳</i>
+        <span>内容策划</span><i>✳</i><span>文案创作</span><i>✳</i><span>秀米排版</span><i>✳</i><span>图文编辑</span><i>✳</i><span>多平台改写</span><i>✳</i><span>数据复盘</span><i>✳</i><span>平台运营</span><i>✳</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">关于我</h2>
+        <p class="section-kicker">About</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-main reveal">
+          <p class="about-lead">
+            我是 <strong>苏彤彤</strong>，上海外国语大学新闻传播专业 2026 级大一学生。
+            在「薪飞扬实习」看到「人民科创」招募新媒体运营实习生的信息后，我认真读了每一条岗位职责，
+            也认真想了自己现在能交付什么、还差什么。
+          </p>
+          <p>
+            我现在的底子主要在文字上：写稿、改稿、按不同平台调整语气。工具层面，
+            秀米排版已经能独立完成，办公软件日常在用。
+            我清楚自己是大一，专业能力还在积累，所以更在意「准确」和「及时」这两件事 ——
+            发布前固定做二次校对、信源多源核对，把准确性当成最不能让步的一条。
+          </p>
+          <p>
+            接下来我会把重心放在两件事上：一是继续打磨文字和选题判断，
+            二是把统计学基础、平台投放机制这些课程内容真正用起来，让内容决策有数据支撑。
+          </p>
+        </div>
+
+        <aside class="about-side">
+          <!-- 三项核心技能：点击展开详情，对应招聘信息里的文字功底 / 秀米等运营工具 / 平台运营 -->
+          <div class="card skill-acc reveal">
+            <h3>三项核心能力</h3>
+            <p class="acc-hint">点击查看对应岗位要求的详情</p>
+
+            <div class="acc">
+              <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-p1">
+                <span class="acc-no">01</span>
+                <span class="acc-title">扎实的文字功底</span>
+                <span class="acc-ico" aria-hidden="true"></span>
+              </button>
+              <div class="acc-panel" id="acc-p1" role="region">
+                <div class="acc-body">
+                  <p>多次在征文比赛中获奖，能完成选题拆解、结构搭建到成稿润色的完整链路。</p>
+                  <ul class="acc-list">
+                    <li>同一素材可按微信、微博、抖音的语气与长度改写</li>
+                    <li>机构稿写得稳，平台文案也能写得有网感</li>
+                    <li>多次在征文比赛中获奖，作品收录成《征文作品合集》共 6 篇</li>
+                  </ul>
+                  <p class="acc-link-row"><a href="#work" data-goto="writing">查看文字作品 →</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="acc">
+              <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-p2">
+                <span class="acc-no">02</span>
+                <span class="acc-title">秀米排版与图文编辑</span>
+                <span class="acc-ico" aria-hidden="true"></span>
+              </button>
+              <div class="acc-panel" id="acc-p2" role="region">
+                <div class="acc-body">
+                  <p>排版是我目前能独立交付的部分。</p>
+                  <ul class="acc-list">
+                    <li>秀米：图文层级、留白节奏、配色与引导关注，能直接出可推送的推文</li>
+                    <li>在秀米里借助现成模板完成配图与视觉组合</li>
+                    <li>视频剪辑与封面、海报这类原创视觉，我目前还没做出成型的作品，正在学，不写进来充数</li>
+                    <li>已在秀米上独立完成公众号推文《电影推荐｜在记忆、歌声与固执中学会爱》</li>
+                  </ul>
+                  <p class="acc-link-row"><a href="#work" data-goto="design">查看排版与图文作品 →</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc">
+              <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-p3">
+                <span class="acc-no">03</span>
+                <span class="acc-title">平台规则与流量逻辑</span>
+                <span class="acc-ico" aria-hidden="true"></span>
+              </button>
+              <div class="acc-panel" id="acc-p3" role="region">
+                <div class="acc-body">
+                  <p>长期深度使用小红书、B 站、抖音，关注各平台的分发机制与内容偏好。</p>
+                  <ul class="acc-list">
+                    <li>了解推荐逻辑、社区规则边界与常见违规点</li>
+                    <li>正在系统学习小红书蒲公英平台与抖音巨量引擎的数据投放机制</li>
+                    <li>在修统计学基础（专业大类选修课），后续会学 SPSS，把数据用起来</li>
+                  </ul>
+                  <p class="acc-link-row"><a href="#match">查看岗位对照表 →</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fact-card reveal">
+            <h3>基本信息</h3>
+            <ul class="fact-list">
+              <li><span>学校</span><b>上海外国语大学</b></li>
+              <li><span>专业</span><b>新闻传播</b></li>
+              <li><span>年级</span><b>2026 级 · 大一</b></li>
+              <li><span>意向岗位</span><b>新媒体运营实习生</b></li>
+              <li><span>到岗时间</span><b>每周 3 天起</b></li>
+              <li><span>手机</span><b>139-6081-3567</b></li>
+              <li><span>微信</span><b>stt137690</b></li>
+              <li><span>邮箱</span><b>2579631561@qq.com</b></li>
+            </ul>
+          </div>
+          <div class="card quote-card reveal">
+            <p>“把每一件小事做到可交付、可复用。”</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 SKILLS ============ -->
+  <section class="section section-cream" id="skills">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">能力清单</h2>
+        <p class="section-kicker">Capabilities</p>
+      </header>
+
+      <p class="section-note reveal">
+        对照招聘信息里的「岗位职责」与「任职要求」逐条拆解，下面每一项都标注了当前水平与实际情况。
+        <b>带 <span class="mark-dot"></span> 标记的是我还在补强的部分，我不会假装它已经满分。</b>
+      </p>
+
+      <div class="skill-grid">
+        <article class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-no">01</span>
+            <h3>内容策划与文案创作</h3>
+          </div>
+          <p>能独立完成选题拆解 → 结构搭建 → 成稿润色；同一素材可按微信、微博、抖音、网页端改写不同版本。</p>
+          <div class="skill-meter" data-level="82" role="img" aria-label="熟练度 82%"><span></span></div>
+          <div class="skill-foot">
+            <span class="chip chip-solid">熟练</span>
+            <span class="evidence">多次在征文比赛中获奖</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-no">02</span>
+            <h3>秀米排版 / 图文编辑</h3>
+          </div>
+          <p>熟悉秀米图文排版逻辑：层级、留白、配色、引导关注与阅读节奏，能做出可直接推送的成品推文。</p>
+          <div class="skill-meter" data-level="78" role="img" aria-label="熟练度 78%"><span></span></div>
+          <div class="skill-foot">
+            <span class="chip chip-solid">熟练</span>
+            <span class="evidence">秀米排版作品（含已发布的公众号推文）</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-no">03</span>
+            <h3>数据整理与用户行为分析</h3>
+          </div>
+          <p>正在修读「统计学基础」专业大类选修课，将系统学习 SPSS 等数据处理工具，用数据支撑内容优化建议。</p>
+          <div class="skill-meter" data-level="45" role="img" aria-label="熟练度 45%"><span></span></div>
+          <div class="skill-foot">
+            <span class="chip chip-line">在学 <span class="mark-dot"></span></span>
+            <span class="evidence">进度：统计学基础 → SPSS → 数据复盘</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-no">04</span>
+            <h3>办公软件与常用工具</h3>
+          </div>
+          <p>熟练使用文档、表格、演示类办公软件，交付格式规范；写稿阶段会借助常用工具软件做初稿梳理与文字校对。</p>
+          <div class="skill-meter" data-level="75" role="img" aria-label="熟练度 75%"><span></span></div>
+          <div class="skill-foot">
+            <span class="chip chip-solid">熟练</span>
+            <span class="evidence">文档 / 表格 / 演示类日常在使用</span>
+          </div>
+        </article>
+
+        <article class="skill-card skill-card-soft reveal">
+          <div class="skill-top">
+            <span class="skill-no">05</span>
+            <h3>责任心与快速学习</h3>
+          </div>
+          <p>做事细心严谨，发布前双重校对；大一课业压力相对可控，拥有充裕精力与强求知欲，能承接临时交办事项。</p>
+          <div class="skill-tags">
+            <span>细心严谨</span><span>主动补位</span><span>快速上手</span><span>抗压交付</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 MATCH ============ -->
+  <section class="section" id="match">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">岗位对照表</h2>
+        <p class="section-kicker">Job Fit</p>
+      </header>
+
+      <p class="section-note reveal">
+        左边是「人民科创」招聘信息里的原文要求，中间是我对应的能力，最右边是我能拿出来的作品与记录。
+        我把还在成长的部分也留在这里 —— 清楚的自我认知，比漂亮的措辞更有用。
+      </p>
+
+      <div class="match-wrap reveal">
+        <table class="match-table">
+          <caption class="sr-only">岗位职责与个人能力对照</caption>
+          <thead>
+            <tr>
+              <th scope="col">岗位职责 / 任职要求</th>
+              <th scope="col">我的对应能力</th>
+              <th scope="col">作品与记录</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="岗位职责">
+                <span class="req-tag">职责 1</span>
+                协助社交媒体平台（微信、微博、抖音、网页等）的日常内容策划、编辑与发布，确保内容及时性与准确性。
+              </td>
+              <td data-label="我的能力">
+                具备选题拆解到成稿的完整链路能力；熟悉秀米排版与多平台图文规范；写稿时会借助工具软件加快初稿速度，但事实、语气与分寸感全部人工确认。发布前固定执行二次校对清单。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                《征文作品合集》共 6 篇<br />
+                已发布的秀米推文
+              </td>
+            </tr>
+            <tr>
+              <td data-label="岗位职责">
+                <span class="req-tag">职责 2</span>
+                参与数据分析工作，通过对用户行为数据的分析，为内容优化提供建议。
+              </td>
+              <td data-label="我的能力">
+                正在修读统计学基础选修课，将学习 SPSS；已理解完播率、互动率、涨粉来源等核心指标，能用表格做基础复盘并整理成结论。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                <span class="chip chip-line">课程学习中</span>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="岗位职责">
+                <span class="req-tag">职责 3</span>
+                协助策划并执行线上互动活动，提升用户参与度和粉丝粘性。
+              </td>
+              <td data-label="我的能力">
+                能参与互动玩法的内容策划与规则梳理（评论区互动、话题挑战、抽奖等），并做成清晰的执行清单；熟悉各平台在活动玩法上的规则边界。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                <span class="chip chip-line">可面试详述</span>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="岗位职责">
+                <span class="req-tag">职责 4</span>
+                收集行业动态和热点话题，为内容创作提供素材和灵感。
+              </td>
+              <td data-label="我的能力">
+                已形成固定的每日热点浏览习惯：多平台热榜 + 关键词订阅 + 摘要归档，沉淀成可检索的选题库。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                <span class="chip chip-line">可面试详述</span>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="岗位职责">
+                <span class="req-tag">职责 5</span>
+                协助完成领导交办的其他新媒体相关工作。
+              </td>
+              <td data-label="我的能力">
+                责任心强、响应快，对临时交办的任务不推诿，交办事项主动同步进度。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                到岗时间：<b>每周 3 天起</b><br />实习周期：<b>3 个月以上</b>
+              </td>
+            </tr>
+            <tr class="row-req">
+              <td data-label="任职要求">
+                <span class="req-tag">要求 1</span>
+                本科及以上学历在校学生，新闻、传播、新媒体等相关专业优先。
+              </td>
+              <td data-label="我的能力">
+                上海外国语大学新闻传播专业在读，专业完全对口；上外的语言环境也让我能处理中英双语内容。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                上海外国语大学 · 新闻传播<br />
+                <span class="chip chip-solid">对口</span>
+              </td>
+            </tr>
+            <tr class="row-req">
+              <td data-label="任职要求">
+                <span class="req-tag">要求 2</span>
+                热爱新媒体行业，对社交媒体平台有深入了解，熟悉各平台的运营规则和玩法者优先。
+              </td>
+              <td data-label="我的能力">
+                长期深度使用小红书、B 站、抖音，关注平台规则变化与流量逻辑；正在系统学习小红书蒲公英平台与抖音巨量引擎的数据投放机制。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                <span class="chip chip-line">面试时可展开聊</span>
+              </td>
+            </tr>
+            <tr class="row-req">
+              <td data-label="任职要求">
+                <span class="req-tag">要求 3</span>
+                具备良好的文字功底和内容创作能力，能够撰写吸引人的文案。
+              </td>
+              <td data-label="我的能力">
+                多次在征文比赛中获奖；能写严肃的机构稿，也能写有网感的平台文案。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                《征文作品合集》<br />
+                <span class="chip chip-solid">获奖</span>
+              </td>
+            </tr>
+            <tr class="row-req">
+              <td data-label="任职要求">
+                <span class="req-tag">要求 4</span>
+                熟练使用办公软件和新媒体运营工具，如秀米、剪映等。
+              </td>
+              <td data-label="我的能力">
+                熟练使用秀米排版，能独立完成可直接推送的图文（对应要求里的「如秀米」）；办公软件日常使用。剪映剪辑与封面海报这类原创视觉我还在学，目前没有成型作品，不做承诺。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                已发布的秀米推文
+              </td>
+            </tr>
+            <tr class="row-req">
+              <td data-label="任职要求">
+                <span class="req-tag">要求 5</span>
+                有较强的学习能力和团队协作精神，工作积极主动，责任心强。
+              </td>
+              <td data-label="我的能力">
+                秀米排版是自己找教程练出来的，学习能力有实际落点。做事细心严谨：发布前固定执行二次校对，涉及事实与数据逐条核对来源。习惯用共享文档和清单推进协作，交办事项主动同步进度；课业压力可控，能稳定每周到岗 3 天并连续实习 3 个月以上。
+              </td>
+              <td data-label="作品与记录" class="cell-evidence">
+                <span class="chip chip-line">无需补充</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="match-summary reveal">
+        <div class="summary-card">
+          <span class="summary-num">01</span>
+          <h3>能马上上手的</h3>
+          <p>内容策划、文案撰写、秀米排版与图文编辑、多平台内容改写、事实核对与二次校对。</p>
+        </div>
+        <div class="summary-card">
+          <span class="summary-num">02</span>
+          <h3>正在补强的</h3>
+          <p>数据投放机制（蒲公英 / 巨量引擎）、统计学基础与 SPSS、线上互动活动的完整执行经验。</p>
+        </div>
+        <div class="summary-card summary-card-accent">
+          <span class="summary-num">03</span>
+          <h3>我最想证明的</h3>
+          <p>我还在打基础，但能把交到手上的每件小事做扎实：写清楚、排整齐、发准确，并且愿意一直学下去。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 PORTFOLIO ============ -->
+  <section class="section section-cream" id="work">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title">作品集</h2>
+        <p class="section-kicker">Selected Work</p>
+      </header>
+
+      <div class="work-bar reveal">
+        <p class="section-note">
+          两类作品：一篇是文字，一篇是排版 —— 都是我独立完成的。
+          <b>两张卡的封面、标题与说明都按实际内容填好了</b>，征文合集还附了可下载的全文 PDF。
+        </p>
+        <div class="filters" role="tablist" aria-label="作品分类筛选">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+          <button class="filter" data-filter="writing" role="tab" aria-selected="false">文字作品</button>
+          <button class="filter" data-filter="design" role="tab" aria-selected="false">图文编辑</button>
+                  </div>
+      </div>
+
+      <div class="work-grid" id="workGrid">
+        <article class="work-card reveal" data-cat="writing">
+          <div class="work-thumb">
+            <img src="assets/img/work-1.jpg" alt="《征文作品合集》封面：不将不迎，胜而不伤" width="960" height="660" loading="lazy" />
+          </div>
+          <div class="work-body">
+            <div class="work-meta"><span class="chip chip-line">文字作品</span><span>征文合集</span></div>
+            <h3>征文作品合集</h3>
+            <p>收录 6 篇独立完成的文章，涵盖议论文、散文与诗词：一篇关于「迎拒取舍」的思辨，一篇写青春志向，一篇谈慎言之道；另有两篇文本细读 —— 苏轼《念奴娇·赤壁怀古》的自省精神，以及《边城》的生命、自然与苦难三重意象。</p>
+            <dl class="work-spec">
+              <div><dt>篇目</dt><dd>《不将不迎，胜而不伤》等 6 篇</dd></div>
+              <div><dt>阅读</dt><dd><a href="assets/files/苏彤彤-征文作品合集.pdf" download>下载全文 PDF（6 篇）→</a></dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-cat="design">
+          <div class="work-thumb">
+            <img src="assets/img/work-2.jpg" alt="秀米推文《电影推荐｜在记忆、歌声与固执中学会爱》的封面图" width="960" height="660" loading="lazy" />
+          </div>
+          <div class="work-body">
+            <div class="work-meta"><span class="chip chip-line">图文编辑</span><span>秀米</span></div>
+            <h3>《电影推荐｜在记忆、歌声与固执中学会爱》</h3>
+            <p>在秀米上独立完成的公众号推文：选题立意、文案撰写、图文层级与阅读节奏。用「真正的死亡是被遗忘，真正的活着是被看见」切入，串联三部电影讲同一件事。</p>
+            <dl class="work-spec">
+              <div><dt>工具</dt><dd>秀米</dd></div>
+              <div><dt>阅读</dt><dd><a href="https://v.xiumius.cn/board/v5/7Nldv/721939518" target="_blank" rel="noopener noreferrer">打开这条推文 →</a></dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+
+      <p class="work-empty" id="workEmpty" hidden>该分类下暂无作品，欢迎补充。</p>
+    </div>
+  </section>
+
+  <!-- ============ 06 CONTENT WORKFLOW ============ -->
+  <section class="section section-dark" id="tools">
+    <div class="wrap">
+      <header class="section-head section-head-light reveal">
+        <span class="section-index">06</span>
+        <h2 class="section-title">内容工作流程</h2>
+        <p class="section-kicker">How I Work</p>
+      </header>
+
+      <p class="section-note section-note-light reveal">
+        下面是我日常处理一条内容的顺序和思路。我还没到「有一套成熟方法论」的程度，
+        每一步都写明用什么、人来把关什么，以及我在哪一步最容易出错。
+      </p>
+
+      <ol class="flow">
+        <li class="flow-step reveal">
+          <span class="flow-no">01</span>
+          <h3>热点搜集</h3>
+          <p class="flow-tool">多平台热榜 + 关键词订阅</p>
+          <p>每天固定时段浏览各平台热榜与关键词订阅，交叉比对后归档，避免只凭第一眼的印象选题。</p>
+        </li>
+        <li class="flow-step reveal">
+          <span class="flow-no">02</span>
+          <h3>选题与角度</h3>
+          <p class="flow-tool">头脑风暴 + 人工筛选</p>
+          <p>先列出多个可能角度再筛掉平庸的，避免第一反应就动笔。判断标准是：读者凭什么点开。</p>
+        </li>
+        <li class="flow-step reveal">
+          <span class="flow-no">03</span>
+          <h3>成稿与核对</h3>
+          <p class="flow-tool">初稿 → 事实核验 → 二次校稿</p>
+          <p>事实、数据、机构表述逐条核对来源；语气和分寸感自己定，不外包给任何工具。</p>
+        </li>
+        <li class="flow-step reveal">
+          <span class="flow-no">04</span>
+          <h3>多平台适配</h3>
+          <p class="flow-tool">一稿多改模板</p>
+          <p>公众号要完整、微博要短促、抖音要钩子，同一素材按平台特性拆成不同版本。</p>
+        </li>
+        <li class="flow-step reveal">
+          <span class="flow-no">05</span>
+          <h3>排版与配图</h3>
+          <p class="flow-tool">秀米</p>
+          <p>把版面节奏和层级理清楚，保证读者点得开、看得完。</p>
+        </li>
+        <li class="flow-step reveal">
+          <span class="flow-no">06</span>
+          <h3>数据复盘</h3>
+          <p class="flow-tool">表格 + SPSS（在学）</p>
+          <p>记录曝光、互动、涨粉来源，用数据反过来决定下一轮选题。这一环我目前最弱，正在补。</p>
+        </li>
+      </ol>
+
+      <div class="tool-cloud reveal">
+        <span class="tool-chip">秀米</span>
+        <span class="tool-chip">文字校对</span>
+        <span class="tool-chip">文档 / 表格 / 演示</span>
+        <span class="tool-chip">小红书蒲公英 <em>学习中</em></span>
+        <span class="tool-chip">抖音巨量引擎 <em>学习中</em></span>
+        <span class="tool-chip">SPSS <em>在学</em></span>
+        <span class="tool-chip">常用工具软件</span>
+        <span class="tool-chip tool-chip-add">+ 你的补充</span>
+      </div>
+
+      <p class="flow-note reveal">
+        <b>关于准确性的态度：</b>工具可以帮我加快初稿和资料整理，但事实与出处一律由我人工核验。
+        涉及数据、政策与机构表述的内容，来源不清楚就不发。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 07 TIMELINE ============ -->
+  <section class="section" id="timeline">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-index">07</span>
+        <h2 class="section-title">经历与成长</h2>
+        <p class="section-kicker">Timeline</p>
+      </header>
+
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <span class="tl-year">2026</span>
+          <div class="tl-body">
+            <h3>上海外国语大学 · 新闻传播专业</h3>
+            <p>2026 级大一在读。开始系统接触新闻传播的专业训练，同时修读「统计学基础」专业大类选修课。</p>
+            <span class="chip chip-line">在读</span>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <span class="tl-year">2026</span>
+          <div class="tl-body">
+            <h3>征文比赛获奖</h3>
+            <p>多次在征文比赛中获奖，收录成《征文作品合集》共 6 篇，涵盖议论文、散文与诗词。写作是我目前最确定的底子。</p>
+            <span class="chip chip-solid">已确认</span>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <span class="tl-year">持续</span>
+          <div class="tl-body">
+            <h3>自学内容工具</h3>
+            <p>秀米排版是自己找教程练出来的；也慢慢在补充内容领域的其他技能。</p>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <span class="tl-year">进行中</span>
+          <div class="tl-body">
+            <h3>平台投放机制学习</h3>
+            <p>系统学习小红书蒲公英平台与抖音巨量引擎的数据投放机制，补齐岗位职责 2 所需的分析视角。</p>
+            <span class="chip chip-line">学习中</span>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <span class="tl-year">2026</span>
+          <div class="tl-body">
+            <h3>院学生会 · 生涯规划部门</h3>
+            <p>在部门里参与活动策划与信息整理类工作，习惯按清单推进、按时交付。</p>
+            <span class="chip chip-solid">在任</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 CONTACT ============ -->
+  <section class="section section-contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-copy reveal">
+        <span class="section-index">08</span>
+        <h2>期待有机会，<br />为「人民科创」的新媒体内容出一份力。</h2>
+        <p>每周可保证 3 天到岗，可连续实习 3 个月以上，随时可以参加面试。</p>
+
+        <div class="contact-actions">
+          <a class="btn btn-solid btn-lg" href="mailto:2579631561@qq.com">
+            邮件联系我
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="M2 4.5h12v7H2zM2 5l6 4 6-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="copy-row">
+          <button class="btn btn-ghost btn-sm copy-btn" type="button" data-copy-text="手机号" data-copy="13960813567">
+            <span class="copy-label">复制手机号</span>
+          </button>
+          <button class="btn btn-ghost btn-sm copy-btn" type="button" data-copy-text="微信号" data-copy="stt137690">
+            <span class="copy-label">复制微信号</span>
+          </button>
+          <button class="btn btn-ghost btn-sm copy-btn" type="button" data-copy-text="邮箱" data-copy="2579631561@qq.com">
+            <span class="copy-label">复制邮箱</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="contact-side reveal">
+        <ul class="contact-list">
+          <li>
+            <span class="cl-label">手机</span>
+            <b class="cl-value">139-6081-3567</b>
+          </li>
+          <li>
+            <span class="cl-label">微信</span>
+            <b class="cl-value">stt137690</b>
+          </li>
+          <li>
+            <span class="cl-label">邮箱</span>
+            <b class="cl-value">2579631561@qq.com</b>
+          </li>
+        </ul>
+
+        <!-- 微信二维码 + 作品集入口 -->
+        <figure class="qr-card">
+          <div class="qr-box">
+            <img src="assets/img/wechat-qr.jpg" alt="苏彤彤的微信二维码，扫码添加好友" width="700" height="700" />
+          </div>
+          <figcaption>
+            <b>微信扫码加我</b>
+            <span>也可以直接搜索微信号 <code>stt137690</code></span>
+            <button class="btn btn-ghost btn-sm copy-btn qr-copy" type="button" data-copy-text="微信号" data-copy="stt137690">
+              <span class="copy-label">复制微信号</span>
+            </button>
+          </figcaption>
+        </figure>
+
+        <div class="card link-card">
+          <h3>作品集主页</h3>
+          <p class="link-hint">秀米上的图文作品，点开即可直接阅读。</p>
+          <a class="btn btn-solid btn-sm link-btn"
+             href="https://v.xiumius.cn/board/v5/7Nldv/721939518"
+             target="_blank" rel="noopener noreferrer">
+            打开秀米作品
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="M6 3h7v7M13 3L6.5 9.5M11 12.5H3.5V5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee marquee-dark" aria-hidden="true">
+      <div class="marquee-track">
+        <span>内容策划</span><i>✳</i><span>文案创作</span><i>✳</i><span>秀米排版</span><i>✳</i><span>图文编辑</span><i>✳</i><span>多平台改写</span><i>✳</i><span>数据复盘</span><i>✳</i><span>平台运营</span><i>✳</i>
+        <span>内容策划</span><i>✳</i><span>文案创作</span><i>✳</i><span>秀米排版</span><i>✳</i><span>图文编辑</span><i>✳</i><span>多平台改写</span><i>✳</i><span>数据复盘</span><i>✳</i><span>平台运营</span><i>✳</i>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>苏彤彤</strong>
+      <span>新闻传播 · 上海外国语大学</span>
+    </div>
+    <nav class="footer-nav" aria-label="页脚导航">
+      <a href="#about">关于</a>
+      <a href="#skills">能力</a>
+      <a href="#match">岗位对照</a>
+      <a href="#work">作品集</a>
+      <a href="#tools">内容流程</a>
+      <a href="#timeline">经历</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <p class="footer-meta">
+      © <span id="year">2026</span> 苏彤彤 · 投递岗位：人民科创 新媒体运营实习生
+      <br /><span class="footer-hint">联系方式：139-6081-3567 · 微信 stt137690 · 2579631561@qq.com</span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
