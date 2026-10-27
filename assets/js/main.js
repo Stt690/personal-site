@@ -224,7 +224,7 @@
     function release() { if (!revealed) { revealed = true; done(); } }
 
     function startCount() {
-      var total = 900;
+      var total = 1400;
       var t0 = performance.now();
       (function step(now) {
         if (finished) return;
@@ -254,14 +254,15 @@
 
     intro.classList.add('is-play');
     startCount();
-    later(finish, 2200);
+    /* 山脊线绘制约 1.4s，幕布 1.5s 起升 */
+    later(finish, 1500);
 
     if (skipBtn) skipBtn.addEventListener('click', finish);
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') finish();
     });
 
-    /* 兜底：无论动画是否正常播放，3.2 秒后一定放行页面，避免内容被幕布挡住 */
+    /* 兜底：无论动画是否正常播放，2.1 秒后一定放行页面，避免内容被幕布挡住 */
     setTimeout(function () {
       if (intro.parentNode) {
         intro.classList.add('is-lifting', 'is-done');
@@ -269,7 +270,7 @@
       }
       document.body.classList.remove('intro-lock');
       release();
-    }, 3200);
+    }, 2100);
   }
 
   /* ---------- 7. 核心能力折叠面板 ---------- */
@@ -310,6 +311,117 @@
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
+  /* ---------- 10. 小猫光标：延迟跟随 + 拖动倾斜 + 拖影 + 眨眼 ---------- */
+  function initCatCursor() {
+    var mq = window.matchMedia;
+    /* 触屏（无精确指针）与「减少动效」偏好 → 保持系统光标，不加 DOM 猫 */
+    if (!mq || !mq('(pointer: fine)').matches) return;
+    if (mq('(prefers-reduced-motion: reduce)').matches) return;
+
+    var host = document.createElement('div');
+    host.id = 'catCursor';
+    var face = document.createElement('span');
+    face.className = 'cat-face';
+    host.appendChild(face);
+    document.body.appendChild(host);
+
+    /* 三级拖影：越靠后跟随越慢，位移落后越多，形成被拖着走的尾巴 */
+    var tails = [];
+    var ks = [0.150, 0.105, 0.068];
+    for (var i = 0; i < 3; i++) {
+      var t = document.createElement('div');
+      t.className = 'cat-trail t' + (i + 1);
+      t.appendChild(document.createElement('i'));
+      document.body.appendChild(t);
+      tails.push({ el: t, x: -200, y: -200, k: ks[i] });
+    }
+
+    var mx = -200, my = -200;   /* 鼠标真实位置 */
+    var cx = -200, cy = -200;   /* 猫的当前位置（插值追赶鼠标） */
+    var tilt = 0;               /* 拖动倾斜角 */
+    var live = false;
+    var raf = null;
+    var blinkTimer = null;
+
+    document.documentElement.className += ' has-cat';
+
+    function onMove(e) {
+      mx = e.clientX; my = e.clientY;
+      if (!live) {
+        live = true;
+        cx = mx; cy = my;
+        for (var j = 0; j < tails.length; j++) { tails[j].x = mx; tails[j].y = my; }
+        host.classList.add('is-on');
+        for (var n = 0; n < tails.length; n++) tails[n].el.classList.add('is-on');
+        loop();
+        scheduleBlink();
+      }
+    }
+
+    function scheduleBlink() {
+      clearTimeout(blinkTimer);
+      blinkTimer = setTimeout(function () {
+        blink();
+        scheduleBlink();
+      }, 3200 + Math.random() * 4800);   /* 3.2s–8s 随机自动眨一下 */
+    }
+
+    function blink() {
+      host.classList.remove('is-blink');
+      void host.offsetWidth;             /* 强制重排，保证连点两次也能重放动画 */
+      host.classList.add('is-blink');
+      setTimeout(function () { host.classList.remove('is-blink'); }, 260);
+    }
+
+    function loop() {
+      var px = cx, py = cy;
+      /* 主光标 k=0.22：轻微滞后，这是「拖动感」的来源 */
+      cx += (mx - cx) * 0.22;
+      cy += (my - cy) * 0.22;
+
+      var vx = cx - px;
+      var target = Math.max(-22, Math.min(22, vx * 1.15));   /* 横向速度 → 倾斜角 */
+      tilt += (target - tilt) * 0.16;                        /* 倾斜自身再做平滑 */
+
+      host.style.transform = 'translate3d(' + cx.toFixed(2) + 'px,' + cy.toFixed(2) + 'px,0) rotate(' + tilt.toFixed(2) + 'deg)';
+
+      for (var i = 0; i < tails.length; i++) {
+        var t = tails[i];
+        t.x += (cx - t.x) * t.k;
+        t.y += (cy - t.y) * t.k;
+        t.el.style.transform = 'translate3d(' + t.x.toFixed(2) + 'px,' + t.y.toFixed(2) + 'px,0)';
+      }
+      raf = requestAnimationFrame(loop);
+    }
+
+    document.addEventListener('mousemove', onMove, { passive: true });
+
+    /* 点击 → 眨眼 + 按下姿态 */
+    document.addEventListener('mousedown', function () {
+      host.classList.add('is-down');
+      blink();
+    }, { passive: true });
+    document.addEventListener('mouseup', function () {
+      host.classList.remove('is-down');
+    }, { passive: true });
+
+    /* 悬停可点元素 → 猫放大，提示「这里能点」 */
+    var HOT = 'a,button,[role="button"],input,select,textarea,label,.sticker,.work-card,.acc-btn,.copy-btn,.filter';
+    document.addEventListener('mouseover', function (e) {
+      var hit = e.target && e.target.closest && e.target.closest(HOT);
+      if (hit) host.classList.add('is-hot'); else host.classList.remove('is-hot');
+    }, { passive: true });
+
+    /* 鼠标移出窗口 → 收起 */
+    document.addEventListener('mouseleave', function () {
+      live = false;
+      if (raf) { cancelAnimationFrame(raf); raf = null; }
+      clearTimeout(blinkTimer);
+      host.classList.remove('is-on', 'is-blink', 'is-down', 'is-hot');
+      for (var i = 0; i < tails.length; i++) tails[i].el.classList.remove('is-on');
+    });
+  }
+
   /* ---------- 启动 ---------- */
   function boot() {
     initIntro(function () {
@@ -324,6 +436,7 @@
     initCopy();
     initAnchors();
     initYear();
+    initCatCursor();
   }
 
   if (document.readyState === 'loading') {
